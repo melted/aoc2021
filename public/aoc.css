@@ -4,6 +4,26 @@ p {
 }
 
 body {
-    margin: 0px;
+    margin: 10px;
 }
 
+.disp_box {
+    width: 95%;
+    border-style: solid;
+    border-color: cadetblue;
+    padding: 5px;
+}
+
+.disp_header {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+}
+
+.disp_header>* {
+    margin-right: 10px;
+}
+
+h2 {
+    color: royalblue;
+}

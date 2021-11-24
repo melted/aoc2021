@@ -1,0 +1,8 @@
+{
+    "mount": {
+      "public": "/",
+      "src": "/js",
+      "data": "/input"
+    },
+    "plugins": []
+}

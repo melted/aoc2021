@@ -18,12 +18,19 @@ body {
     display: flex;
     align-items: baseline;
     justify-content: flex-start;
+    background-color: lightcoral;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .disp_header>* {
-    margin-right: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
 }
 
 h2 {
     color: royalblue;
+}
+
+.disp_output {
+    font-family: Consolas, monospace;
 }

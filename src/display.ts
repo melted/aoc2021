@@ -24,11 +24,16 @@ class DisplayElement {
         header.innerHTML = `<h2>Day ${this.n}</h2><a href='${this.inputUri}'>input data</a>`
         let button = document.createElement('button')
         button.textContent = 'Run'
+        let time = document.createElement('div')
         button.addEventListener('click', async () => {
             let text = await this.LoadInput()
+            let timeStart = Date.now()
             this.display.run(text, output)
+            let timeEnd = Date.now()
+            time.innerText = `Time: ${timeEnd - timeStart} ms`
         })
         header.appendChild(button)
+        header.appendChild(time)
         div.appendChild(header)
         div.appendChild(output)
         el.appendChild(div)

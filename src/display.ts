@@ -25,6 +25,7 @@ class DisplayElement {
         let button = document.createElement('button')
         button.textContent = 'Run'
         let time = document.createElement('div')
+        time.classList.add('disp_time')
         button.addEventListener('click', async () => {
             let text = await this.LoadInput()
             let timeStart = Date.now()

@@ -12,6 +12,7 @@ body {
     border-style: solid;
     border-color: cadetblue;
     padding: 5px;
+    border-radius: 5px;
 }
 
 .disp_header {
@@ -28,7 +29,11 @@ body {
 }
 
 h2 {
-    color: royalblue;
+    color: #556788;
+}
+
+.disp_time {
+    flex: 1 0 auto;
 }
 
 .disp_output {

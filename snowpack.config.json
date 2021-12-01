@@ -4,5 +4,8 @@
       "src": "/js",
       "data": "/input"
     },
-    "plugins": []
+    "plugins": [],
+    "buildOptions": {
+        "sourceMap": true
+    }
 }

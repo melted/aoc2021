@@ -53,7 +53,8 @@ export function AddDisplay(n : number, disp : Display) {
 }
 
 export function RenderDisplays(el : HTMLElement) {
-    for(let d of displays) {
+    let reversed = displays.slice().reverse();
+    for(const d of reversed) {
         if (d) d.Render(el)
     }
 }

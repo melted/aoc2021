@@ -1,12 +1,13 @@
 import qualified Data.Set as S
 import qualified Data.Map as M
 import Data.Foldable(find)
+import Data.Bifunctor(second)
 
 getData = do
     input <- readFile "../data/input8.txt"
     let xs = map words (lines input)
     let sets = map (map S.fromList) xs
-    pure $ map (\(a, b) -> (a, drop 1 b)) $ map (span (S.notMember '|')) sets
+    pure $ map (second (drop 1) . span (S.notMember '|')) sets
 
 
 solve1 x = length (filter pred x)
@@ -33,7 +34,7 @@ solve2 :: ([S.Set Char],[S.Set Char]) -> Int
 solve2 (defs, disp) = foldl (\acc n -> acc*10 + (table M.! n)) 0 disp
                 where
                     table = decipher defs
-main = do 
+main = do
     input <- getData
     print (sum (map (solve1 . snd) input))
     print (sum (map solve2 input))

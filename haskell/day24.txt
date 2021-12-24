@@ -1,0 +1,318 @@
+Input 0:
+--------------------
+inp w
+add x 14 x=14
+eql x w x= input == 14?1:0
+eql x 0 not x x = 1
+mul y 0 y = 0
+add y 25 y=25
+mul y x 
+add y 1 y=26
+mul z y z =0
+mul y 0 y=0
+add y w y=input
+add y 12 y = input+12
+mul y x 
+add z y z = inp(0)+12
+
+z = input + 12
+
+Input 1
+----------------------------------
+inp w
+mul x 0 x = 0
+add x z x = z
+mod x 26 x = z%26
+add x 11 x = z%26+11
+eql x w false 
+eql x 0 not x x=1
+mul y 0
+add y 25 y=25
+mul y x 
+add y 1 y = 26
+mul z y z=z*26
+mul y 0
+add y w y=inp1
+add y 8 y=inp1+8
+mul y x
+add z y z = 
+
+z = 26*(input0 +12) + (input1 +8)
+
+Input 2
+--------------------------------------------
+inp w
+mul x 0 
+add x z
+mod x 26
+add x 11
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y z = z*26
+mul y 0
+add y w 
+add y 7 y = inp2+7
+mul y x 
+add z y
+
+z = 26^2(input0 +12) + 26(input1 +8)+ (input2+7)
+Input 3:
+------------------------------
+inp w
+mul x 0 ; clear x
+add x z 
+mod x 26 ; x = z%26
+div z 1
+add x 14
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 4
+mul y x
+add z y
+
+z = 26^3(input0 +12) + 26^2(input1 +8)+ 26(input2+7)+input3+4
+
+Input 4:
+--------------------------------
+inp w
+mul x 0
+add x z
+mod x 26
+div z 26
+add x -11
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 4
+mul y x
+add z y
+
+if (input = last - 7)
+    z = 26^2(input0 +12) + 26(input1 +8)+ (input2+7)
+
+Input 5
+-------------------------------
+inp w
+mul x 0
+add x z
+mod x 26
+div z 1
+add x 12
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 1
+mul y x
+add z y
+
+z = 26^3(input0 +12) + 26^2(input1 +8)+ 26(input2+7)+ (input5+1)
+
+Input 6
+-------------------------------
+inp w
+mul x 0
+add x z
+mod x 26
+div z 26
+add x -1
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 10
+mul y x
+add z y
+
+if (input6==input5)
+    z = 26`2(input0 +12) + 26(input1 +8)+ (input2+7)
+
+
+Input 7:
+---------------------
+inp w
+mul x 0
+add x z
+mod x 26
+div z 1
+add x 10
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 8
+mul y x
+add z y
+
+z = 26^3(input0 +12) + 26^2(input1 +8)+ 26(input2+7) + (input7+8)
+
+
+Input 8:
+---------------------------------
+inp w
+mul x 0
+add x z
+mod x 26
+div z 26
+add x -3
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 12
+mul y x
+add z y
+
+if (input8 == input7+5)
+    z = 26^3(input0 +12) + 26^2(input1 +8)+(input2+1
+
+Input 9:
+-----------------------------
+inp w
+mul x 0
+add x z
+mod x 26
+div z 26
+add x -4
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 10
+mul y x
+add z y
+
+
+
+
+Input 10
+-----------------------
+inp w
+mul x 0
+add x z
+mod x 26
+div z 26
+add x -13
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 15
+mul y x
+add z y
+
+
+
+Input 11
+---------------------
+inp w
+mul x 0
+add x z
+mod x 26
+div z 26
+add x -8
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 4
+mul y x
+add z y
+
+
+
+Input 12
+---------------------------
+inp w
+mul x 0
+add x z
+mod x 26
+div z 1
+add x 13
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 10
+mul y x
+add z y
+
+
+
+Input 13:
+------------------------
+inp w
+mul x 0 x = 0
+add x z x = z
+mod x 26 z%26
+div z 26 z=z/26
+add x -11 x=z%26-11 
+eql x w z%26-11!=inp(14)
+eql x 0 
+mul y 0 y=0
+add y 25 
+mul y x y=1 if x
+add y 1
+mul z y
+mul y 0 -> 0 = -z/x - 9 - w
+add y w -> y = -z/x - 9 - w
+add y 9 -> y = -z/x - 9
+mul y x -> y = -z/x
+add z y z = z + y -> y = 0, z = 0 || z = -y
